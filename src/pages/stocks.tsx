@@ -3,7 +3,7 @@ import Head from "next/head";
 import Link from "next/link";
 import { trpc } from "../utils/trpc";
 
-const Home: NextPage = () => {
+const Stocks: NextPage = () => {
 	const hello = trpc.useQuery(["example.hello", { text: "from tRPC" }]);
 
 	return (
@@ -21,7 +21,7 @@ const Home: NextPage = () => {
 				</div>
 				<div className="flex flex-row justify-end md:w-1/2 w-full">
 					<Link href="/stocks">
-						<a className="text-lg md:text-2xl font-extrabold text-gray-700 pr-4">Stocks</a>
+						<a className="text-lg md:text-2xl font-extrabold text-gray-400 pr-4">Stocks</a>
 					</Link>
 					<Link href="/watchlists">
 						<a className="text-lg md:text-2xl font-extrabold text-gray-700 pr-4">Watchlists</a>
@@ -37,4 +37,4 @@ const Home: NextPage = () => {
 	);
 };
 
-export default Home;
+export default Stocks;
